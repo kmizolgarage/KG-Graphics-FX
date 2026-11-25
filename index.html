@@ -1,3 +1,10 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+</head>
+<body>
 <title>KG Graphics Dev Log</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,6 +27,7 @@
   --radius:16px; --radius-sm:10px;
 }
 *{box-sizing:border-box}
+[hidden]{display:none!important} /* the gate sets display:grid, which beats the browser's own [hidden] rule */
 body{margin:0; background:var(--bg); color:var(--txt); font-family:var(--f-body); font-size:15px; line-height:1.6;
   background-image:radial-gradient(1100px 620px at 85% -10%,#171c2b 0%,rgba(11,13,19,0) 60%); background-attachment:fixed}
 .wrap{max-width:980px; margin:0 auto; padding-left:max(16px, env(safe-area-inset-left, 0px)); padding-right:max(16px, env(safe-area-inset-right, 0px)); padding-block:0 64px}
@@ -573,3 +581,6 @@ tbody tr:last-child td{border-bottom:0}
   if (!fromHash()) { setLang("fr"); gate.hidden = false; document.getElementById("pick-fr").focus(); }
 })();
 </script>
+
+</body>
+</html>
